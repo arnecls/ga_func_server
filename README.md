@@ -7,13 +7,13 @@ Once started it listens on port 5880 (tcp).
 The protocol is binary (little endian) and is defined in protocol.go
 
 ```
-request     := [header][data]  
-header      := [function id][data count]  
+request     := <header><data>  
+header      := <function id><data count>  
 function id := uint32  
 data count  := uint32  
 data        := []float32  
 
-response    := [result][error code]  
+response    := <result><error code>  
 result      := float32  
 error code  := uint32
 ```
